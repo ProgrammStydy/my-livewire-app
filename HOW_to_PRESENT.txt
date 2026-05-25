@@ -1,0 +1,39 @@
+# Инструкция для проекта
+
+## 1. Необходимы файлы 
+
+- **Компонент 1 (счётчик)**: `app/Livewire/SimpleCounter.php`  
+  Шаблон: `resources/views/livewire/simple-counter.blade.php`
+
+- **Компонент 2 (список задач)**: `app/Livewire/Tasks/ToDoList.php` – **лежит в подпапке `Tasks`** (выполнено требование)  
+  Шаблон: `resources/views/livewire/tasks/to-do-list.blade.php`
+
+- **Макет**: `resources/views/layouts/app.blade.php`
+
+- **Маршруты**: `routes/web.php`
+
+## 2. Как запустить проект на любом ПК
+
+1. Установить PHP 8.2+, Composer, Laravel Herd (или OpenServer).
+2. Клонировать репозиторий:
+   ```bash
+   git clone https://github.com/ProgrammStydy/my-livewire-app.git
+   cd my-livewire-app
+
+Установить зависимости (если папки vendor нет):
+bash
+composer install
+
+Создать файл .env из .env.example и сгенерировать ключ:
+bash
+cp .env.example .env
+php artisan key:generate
+
+Запустить сервер разработки:
+bash
+php artisan serve
+
+Открыть в браузере:
+Счётчик: http://127.0.0.1:8000/counter
+
+Список задач: http://127.0.0.1:8000/todo
